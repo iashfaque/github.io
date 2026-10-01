@@ -43,15 +43,15 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-heigh
 section{padding-block:72px}
 h1,h2,h3{font-family:var(--disp);font-weight:800;line-height:1.08;text-wrap:balance;letter-spacing:-0.01em}
 a{color:inherit}
-.eyebrow{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.eyebrow{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;opacity:.85}
 .lead{font-size:18px;color:var(--muted)}
 
 /* nav */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-weight:800;letter-spacing:-.01em}
-.mark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--disp);font-weight:800;font-size:15px;letter-spacing:.02em}
-:root[data-theme="dark"] .mark,:root:not([data-theme="light"]) .mark{outline:1px solid var(--band-line)}
+.dot{width:12px;height:12px;background:var(--gold);transform:rotate(45deg);border-radius:2px;flex:0 0 auto}
 .navlinks{display:flex;gap:26px;font-size:14px;font-weight:600}
 .navlinks a{color:var(--muted);text-decoration:none}
 .navlinks a:hover{color:var(--ink)}
@@ -161,14 +161,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   section{padding-block:56px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </style>
 </head>
 <body>
 
 <header class="nav"><div class="wrap">
-  <a class="brand" href="#top" style="text-decoration:none"><span class="mark">MA</span><span>Mohammad Ashfaque</span></a>
+  <a class="brand" href="#top" style="text-decoration:none"><span class="dot" aria-hidden="true"></span><span>Mohammad Ashfaque</span></a>
   <nav class="navlinks">
     <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#impact">Impact</a><a href="#work">Case Studies</a>
   </nav>
@@ -184,7 +184,7 @@ html{scroll-behavior:smooth}
   <div class="cta">
     <a class="chip solid" href="#work">View case studies</a>
     <a class="chip" href="mailto:moashsec@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6l8.5 7 8.5-7"/></svg> moashsec@gmail.com</a>
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 006 6L15 13l5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-3z"/></svg> +91 92176 34727</span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 10-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> Gurugram / NCR</span>
   </div>
   <div class="statstrip">
     <div><div class="n">8+</div><div class="l">Years in tech &amp; security</div></div><div><div class="n">6</div><div class="l">Years at Amazon Security</div></div><div><div class="n">81</div><div class="l">Account insider incident — led</div></div><div><div class="n">AWS · GCIH · GSEC</div><div class="l">Certifications</div></div>
@@ -326,7 +326,6 @@ html{scroll-behavior:smooth}
   <p>Based in Gurugram / NCR and open to opportunities across India. If you're building or scaling a security, risk, or transformation function, I'd welcome a conversation.</p>
   <div class="cta">
     <a class="chip solid" href="mailto:moashsec@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6l8.5 7 8.5-7"/></svg> moashsec@gmail.com</a>
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 006 6L15 13l5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-3z"/></svg> +91 92176 34727</span>
     <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 10-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> Gurugram / NCR</span>
   </div>
 </div></section>
